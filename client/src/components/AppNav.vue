@@ -11,7 +11,7 @@
 
 <style scoped>
 .nav {
-  padding: 0px 7.5px 25px 7.5px;
+  padding: 0px 7.5px 30px 7.5px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
