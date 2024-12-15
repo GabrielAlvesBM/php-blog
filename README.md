@@ -2,7 +2,7 @@
 
 ## 📝 Descrição
 
-Um blog feito com php puro, para estudar php e coloca-lo na web.
+Um blog feito com **PHP** + **VueJS**, para estudar php e coloca-lo na web em uma VPS.
 
 ## 🧑‍💻 Contribuidores
 
