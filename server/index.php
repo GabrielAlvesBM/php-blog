@@ -33,4 +33,6 @@ if (isset($path[2])) {
 
 $method = $_SERVER['REQUEST_METHOD'];
 
-print_r($path);
+include_once './classes/db.php';
+
+include_once './api/posts/posts.php';
