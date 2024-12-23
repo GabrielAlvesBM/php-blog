@@ -33,7 +33,9 @@ if ($action === 'update' && $param !== '') {
 
   if ($resultado) {
     echo json_encode(['dados' => 'Dados atualizados com sucesso!']);
+    exit;
   } else {
     echo json_encode(['ERRO' => 'Houve um erro ao atualizar os dados']);
+    exit;
   }
 }
