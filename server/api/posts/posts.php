@@ -8,4 +8,8 @@ if ($api === 'posts') {
   if ($method === 'POST') {
     include_once 'POST.php';
   }
+
+  if ($method === 'POST' && $_POST['_method'] === 'PUT') {
+    include_once 'PUT.php';
+  }
 }
