@@ -1,6 +1,6 @@
 <?php
 header('Access-Control-Allow-Origin: *');
-header('Content-type: application/json');
+//header('Content-type: application/json');
 
 date_default_timezone_set("America/Sao_Paulo");
 
@@ -34,5 +34,6 @@ if (isset($path[2])) {
 $method = $_SERVER['REQUEST_METHOD'];
 
 include_once './classes/db.php';
+include_once './classes/Env.php';
 
 include_once './api/posts/posts.php';
