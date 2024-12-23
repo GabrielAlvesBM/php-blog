@@ -1,8 +1,13 @@
 <?php
 
+if ($action === '' && $param === '') {
+  echo json_encode(['ERRO' => 'Acão não encontrada.']);
+  exit;
+}
+
 if ($action === 'update' && $param !== '') {
   if (!is_numeric($param)) {
-    echo json_encode(["ERRO" => 'O parâmetro deve ser um número inteiro.']);
+    echo json_encode(["ERRO" => 'O id deve ser um número inteiro.']);
     exit;
   }
   array_shift($_POST);
