@@ -7,10 +7,10 @@ class DB {
     $password = $env->get('DB_PASSWORD');
     $base = $env->get('DB_NAME');
 
-  try {
-    return new PDO("mysql:host=$host;dbname=$base;charset=UTF8;", $user, $password);
-  } catch (PDOException $e) {
-    die("Erro na conexão com o banco de dados: " . $e->getMessage());
-  }
+    try {
+      return new PDO("mysql:host=$host;dbname=$base;charset=UTF8;", $user, $password);
+    } catch (PDOException $e) {
+      die("Erro na conexão com o banco de dados: " . $e->getMessage());
+    }
   }
 }
