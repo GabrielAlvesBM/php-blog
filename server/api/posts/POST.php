@@ -1,4 +1,8 @@
 <?php
+$env = new Env('./.env');
+
+$allowedIps = explode(',', $env->get('ALLOWED_IPS'));
+new CheckIp($allowedIps);
 
 if ($action === '' && $param === '') {
   echo json_encode(['ERRO' => 'Acão não encontrada.']);

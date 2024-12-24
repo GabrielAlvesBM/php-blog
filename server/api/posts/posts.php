@@ -1,9 +1,4 @@
 <?php
-$env = new Env('./.env');
-
-$allowedIps = explode(',', $env->get('ALLOWED_IPS'));
-new CheckIp($allowedIps);
-
 if ($api === 'posts') {
   if ($method === 'GET') {
     include_once 'GET.php';
