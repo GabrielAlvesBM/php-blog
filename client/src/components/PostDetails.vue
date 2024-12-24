@@ -59,6 +59,7 @@ onMounted(async () => {
   .content {
     padding-left: 10px;
 
+    font-family: var(--secondary-font);
     font-size: 1rem;
   }
 
