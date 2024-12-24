@@ -21,7 +21,7 @@ if ($action === 'list' && $param === '') {
   }
 } 
 
-if ($action === 'list' && $param !== '') {
+if ($action === 'list' && $param !== '' && $param2 === '') {
   if (!is_numeric($param)) {
     echo json_encode(["ERRO" => 'O parâmetro deve ser um número inteiro.']);
     exit;
@@ -40,6 +40,27 @@ if ($action === 'list' && $param !== '') {
     exit;
   } else {
     echo json_encode(["dados" => 'Não existe dado para retornar.']);
+    exit;
+  }
+}
+
+if ($action === 'list' && $param !== '' && $param2 !== '') {
+  if (!is_numeric($param2)) {
+    echo json_encode(["ERRO" => 'O parâmetro de limite deve ser 1 numero inteiro.']);
+    exit;
+  }
+
+  $db = DB::connect();
+  $sql = $db->prepare("SELECT * FROM posts LIMIT {$param2}");
+  $sql->execute();
+
+  $resultado = $sql->fetchAll(PDO::FETCH_ASSOC);
+
+  if ($resultado) {
+    echo json_encode(["dados" => $resultado]);
+    exit;
+  } else {
+    echo json_encode(["dados" => 'Não existem dados para retornar.']);
     exit;
   }
 }

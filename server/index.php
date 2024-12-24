@@ -31,6 +31,12 @@ if (isset($path[2])) {
   $param = '';
 }
 
+if (isset($path[3])) {
+  $param2 = $path[3];
+} else {
+  $param2 = '';
+}
+
 $method = $_SERVER['REQUEST_METHOD'];
 
 include_once './classes/db.php';
