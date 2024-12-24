@@ -8,7 +8,7 @@ const posts = ref([])
 
 const { limit } = defineProps({
   limit: {
-    type: Number,
+    type: String,
     required: true,
   },
 })
