@@ -20,11 +20,6 @@ const router = createRouter({
       component: () => import('../views/PostView.vue'),
       props: true,
     },
-    {
-      path: '/categories',
-      name: 'categories',
-      component: () => import('../views/CategoriesView.vue'),
-    },
   ],
 })
 
