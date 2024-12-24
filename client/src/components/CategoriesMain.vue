@@ -1,13 +1,13 @@
 <template>
   <section>
     <ul class="categories-list">
-      <RouterLink to="/categories/:categorie"><li>Tecnologia</li></RouterLink>
-      <RouterLink to="/categories/:categorie"><li>PHP</li></RouterLink>
-      <RouterLink to="/categories/:categorie"><li>JavaScript</li></RouterLink>
-      <RouterLink to="/categories/:categorie"><li>Java</li></RouterLink>
-      <RouterLink to="/categories/:categorie"><li>Docker</li></RouterLink>
-      <RouterLink to="/categories/:categorie"><li>VPS</li></RouterLink>
-      <RouterLink to="/categories/:categorie"><li>Design</li></RouterLink>
+      <RouterLink to="/categories/tecnologia"><li>Tecnologia</li></RouterLink>
+      <RouterLink to="/categories/php"><li>PHP</li></RouterLink>
+      <RouterLink to="/categories/javascript"><li>JavaScript</li></RouterLink>
+      <RouterLink to="/categories/java"><li>Java</li></RouterLink>
+      <RouterLink to="/categories/docker"><li>Docker</li></RouterLink>
+      <RouterLink to="/categories/vps"><li>VPS</li></RouterLink>
+      <RouterLink to="/categories/design"><li>Design</li></RouterLink>
     </ul>
   </section>
 </template>
