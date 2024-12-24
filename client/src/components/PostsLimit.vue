@@ -6,7 +6,7 @@ import { defineProps } from 'vue';
 
 const posts = ref([])
 
-defineProps({
+const { limit } = defineProps({
   limit: {
     type: Number,
     required: true,
@@ -14,7 +14,7 @@ defineProps({
 })
 
 onMounted(async () => {
-  axios.get('http://localhost/php-blog/server/posts/list')
+  axios.get(`http://localhost/php-blog/server/posts/list/0/${limit}`)
     .then((res) => {
       posts.value = res.data.dados
     })
