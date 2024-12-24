@@ -15,10 +15,12 @@
   --color-background: #121212;
   --card-background: #2c2c2c;
   --card-hover: #2c2c2c8a;
+
+  --selection: #252525;
 }
 
 ::selection {
-  background-color: var(--card-background);
+  background-color: var(--selection);
   color: var(--color-text);
 }
 
