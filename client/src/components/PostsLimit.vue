@@ -2,7 +2,6 @@
 import PostArticle from './PostArticle.vue';
 import axios from 'axios';
 import { onMounted, ref } from 'vue';
-import { defineProps } from 'vue';
 
 const posts = ref([])
 
