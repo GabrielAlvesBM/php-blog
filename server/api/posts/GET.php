@@ -7,7 +7,7 @@ if ($action === '' && $param === '') {
 
 if ($action === 'list' && $param === '') {
   $db = DB::connect();
-  $sql = $db->prepare("SELECT * FROM posts");
+  $sql = $db->prepare("SELECT * FROM posts ORDER BY date DESC");
   $sql->execute();
 
   $resultado = $sql->fetchAll(PDO::FETCH_ASSOC);
@@ -51,7 +51,7 @@ if ($action === 'list' && $param !== '' && $param2 !== '') {
   }
 
   $db = DB::connect();
-  $sql = $db->prepare("SELECT * FROM posts LIMIT {$param2}");
+  $sql = $db->prepare("SELECT * FROM posts ORDER BY date DESC LIMIT {$param2}");
   $sql->execute();
 
   $resultado = $sql->fetchAll(PDO::FETCH_ASSOC);
