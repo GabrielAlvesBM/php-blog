@@ -37,8 +37,8 @@ onMounted(async () => {
 
 <style scoped>
   h1 {
-    font-size: 2.5rem;
-    color: var(--primary-color);
+    font-size: 2rem;
+    color: var(--accent-color);
   }
 
   p {

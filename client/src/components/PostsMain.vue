@@ -35,7 +35,7 @@ onMounted(async () => {
     justify-items: center;
     gap: 15px;
 
-    grid-template-columns: repeat(auto-fill, minmax(375px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(475px, 1fr));
   }
 
   @media (max-width: 650px) {
