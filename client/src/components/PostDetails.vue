@@ -1,7 +1,9 @@
 <script setup>
-import { onMounted, ref } from 'vue';
+import { onMounted, ref, useAttrs } from 'vue';
 import { useRoute } from 'vue-router';
 import axios from 'axios';
+
+const attrs = useAttrs();
 
 const route = useRoute()
 const postId = route.params.id
@@ -21,18 +23,18 @@ onMounted(async () => {
 </script>
 
 <template>
-  <header>
-    <h1>{{ post.title }}</h1>
-    <p class="short_description">{{ post.short_description }}</p>
-  </header>
-
-  <main>
-    <p class="content">{{ post.content }}</p>
+  <main v-bind="attrs">
+    <header>
+      <h1>{{ post.title }}</h1>
+      <p class="short_description">{{ post.short_description }}</p>
+    </header>
+    <main>
+      <p class="content">{{ post.content }}</p>
+    </main>
+    <footer>
+      <time>{{ post.date }}</time>
+    </footer>
   </main>
-
-  <footer>
-    <time>{{ post.date }}</time>
-  </footer>
 </template>
 
 <style scoped>
