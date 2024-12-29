@@ -15,10 +15,16 @@
   --color-background: #121212;
   --card-background: #2c2c2c;
   --card-hover: #2c2c2c8a;
+
+  --selection: #252525;
+
+  --primary-font: 'Roboto Mono', 'Fira Code', Consolas, 'Courier New', 'Andale Mono', Monaco,
+    'Lucida Console', monospace;
+  --secondary-font: 'Roboto', 'Open Sans', 'Lato', 'Poppins', 'Montserrat', sans-serif;
 }
 
 ::selection {
-  background-color: var(--card-background);
+  background-color: var(--selection);
   color: var(--color-text);
 }
 
@@ -36,8 +42,7 @@ body {
   color: var(--color-text);
   background: var(--color-background);
   line-height: 1.6;
-  font-family: 'Roboto Mono', 'Fira Code', Consolas, 'Courier New', 'Andale Mono', Monaco,
-    'Lucida Console', monospace;
+  font-family: var(--primary-font);
   font-size: 17px;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;

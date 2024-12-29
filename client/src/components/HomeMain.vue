@@ -2,8 +2,6 @@
   <h1>PHP Blog</h1>
 
   <p>Um blog feito com <span>PHP</span> + <span>VueJS</span>, para estudar php e coloca-lo na web em uma VPS.</p>
-
-  <pre>Futuramente: &lt;Posts recentes></pre>
 </template>
 
 <style scoped>

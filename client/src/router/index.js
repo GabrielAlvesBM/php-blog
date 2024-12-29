@@ -11,13 +11,14 @@ const router = createRouter({
     },
     {
       path: '/posts',
-      name: 'about',
+      name: 'posts',
       component: () => import('../views/PostsView.vue'),
     },
     {
-      path: '/categories',
-      name: 'categories',
-      component: () => import('../views/CategoriesView.vue'),
+      path: '/posts/:id',
+      name: 'postDetails',
+      component: () => import('../views/PostView.vue'),
+      props: true,
     },
   ],
 })

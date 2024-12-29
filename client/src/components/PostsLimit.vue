@@ -1,12 +1,19 @@
-<script setup>
+<script setup lang="ts">
 import PostArticle from './PostArticle.vue';
 import axios from 'axios';
 import { onMounted, ref } from 'vue';
 
 const posts = ref([])
 
+const { limit } = defineProps({
+  limit: {
+    type: String,
+    required: true,
+  },
+})
+
 onMounted(async () => {
-  axios.get('http://localhost/php-blog/server/posts/list')
+  axios.get(`http://localhost/php-blog/server/posts/list/0/${limit}`)
     .then((res) => {
       posts.value = res.data.dados
     })
@@ -14,10 +21,11 @@ onMounted(async () => {
       console.error('Erro ao buscar dados: ', error)
     })
 })
+
 </script>
 
 <template>
-  <section class="posts-section">
+  <section>
     <PostArticle 
       v-for="post in posts"
       :key="post.id"
@@ -30,17 +38,9 @@ onMounted(async () => {
 </template>
 
 <style scoped>
-  .posts-section {
-    display: grid;
-    justify-items: center;
-    gap: 15px;
-
-    grid-template-columns: repeat(auto-fill, minmax(475px, 1fr));
-  }
-
-  @media (max-width: 650px) {
-    .posts-section {
-      grid-template-columns: 1fr;
-    }
+  section {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
   }
 </style>

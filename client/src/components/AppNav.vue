@@ -5,7 +5,6 @@
   <nav class="nav">
     <RouterLink to="/">Página Inicial</RouterLink>
     <RouterLink to="/posts">Posts</RouterLink>
-    <RouterLink to="/categories">Categorias</RouterLink>
   </nav>
 </template>
 
