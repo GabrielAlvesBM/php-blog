@@ -11,13 +11,12 @@ if ($action === '' && $param === '') {
 
 if ($action === 'add' && $param === '') {
   $db = DB::connect();
-  $sql = $db->prepare("INSERT INTO posts (title, short_description, content, categories)
-    VALUES (:title, :short_description, :content, :categories)");
+  $sql = $db->prepare("INSERT INTO posts (title, short_description, content)
+    VALUES (:title, :short_description, :content)");
 
   $sql->bindParam('title', $_POST['title'], PDO::PARAM_STR);
   $sql->bindParam('short_description', $_POST['short_description'], PDO::PARAM_STR);
   $sql->bindParam('content', $_POST['content'], PDO::PARAM_LOB);
-  $sql->bindParam('categories', $_POST['categories'], PDO::PARAM_STR);
 
   $resultado = $sql->execute();
 
